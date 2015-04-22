@@ -9,12 +9,12 @@ Execute a command for every file in directory
 	for f in *.ape; do ffmpeg -i "$f" "${f%%.*}.wav"; done
 
 Search for files recursively and execute a command
---------------------------------------
+--------------------------------------------------
 	find . -name "*.txt" -type f -exec program
 
 
-FAT-Label setzen
-----------------
+Set FAT label
+-------------
 	mlabel -i /dev/sdh1 ::"MYLABEL"
 	
 	
@@ -25,8 +25,8 @@ Create USB stick with UDF filesystem
 	
 [Source](http://tanguy.ortolo.eu/blog/article93/usb-udf)
 
-Public key für SSH Zugang auf Server laden
-------------------------------------------
+Copy a local public key onto a server for SSH access
+----------------------------------------------------
 	ssh-keygen -t rsa
 	ssh-copy-id -i ~/.ssh/id_rsa.pub user@server
 
@@ -45,8 +45,8 @@ Create a SOCKS Proxy through an SSH Tunnel
 Configure your webbrowser to use a proxy and set `127.0.0.1` as your SOCKS host at port `1080`.
 
 
-Externe IP-Adresse anzeigen
----------------------------
+Show external ip address
+------------------------
 	dig +short myip.opendns.com @resolver1.opendns.com
 	curl checkip.spdns.de
 
@@ -85,8 +85,8 @@ Create a copy of local Git repository on a remote server
 		git push --set-upstream origin master
 	
 
-Vim: Ersetzen im gesamten Dokument
-----------------------------------
+Vim: Replace in whole document
+------------------------------
 	:%s/foo/bar/g
 
 
