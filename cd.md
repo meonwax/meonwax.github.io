@@ -1,15 +1,15 @@
-ISO Image brennen
------------------
+Burn ISO image
+--------------
 	wodim -dao -v dev=/dev/sr0
 	
 
-CD/DVD Image mit Cuesheet/TOC brennen
----------------------------------
+Burn CD/DVD image with cuesheet/TOC
+-----------------------------------
 	cdrdao write -n --driver generic-mmc-raw --device /dev/sr0 file.toc
 	
 	
-CD-RW löschen
--------------
+Blank CD-RW
+-----------
 	wodim -v dev=/dev/sr0 -blank=fast
 
 
