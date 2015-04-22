@@ -1,15 +1,15 @@
-Alle Prozesse anzeigen, die auf Netzwerk-Ports lauschen
--------------------------------------------------------
+List a processes that are listening on network ports
+----------------------------------------------------
 	lsof -i -n -P | grep -e LISTEN
 	netstat -tunlp
 
 
-Für jede Datei im Verzeichnis Befehl ausführen
-----------------------------------------------
+Execute a command for every file in directory
+---------------------------------------------
 	for f in *.ape; do ffmpeg -i "$f" "${f%%.*}.wav"; done
 
-Dateien suchen und Befehl ausführen
------------------------------------
+Search for files recursively and execute a command
+--------------------------------------
 	find . -name "*.txt" -type f -exec program
 
 
