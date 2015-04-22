@@ -69,16 +69,14 @@ Rip a DVD and encode to XVid
 	for i in 3 4 5 6; do ffmpeg -i title$i.vob -filter:v yadif -vcodec libxvid -q:v 5 -s 640x480 -acodec libmp3lame -ab 128000 title$i.avi; done
 
 
-Record a game in windows mode
------------------------------
-1. Ausführen und Spielefenster anklicken
+Record a game in window mode
+----------------------------
+1. Run `xwininfo` and click on game window
 
-		xwininfo
-
-2. Erhaltene Werte hier einsetzen:
+2. Insert shown values here:
 
 		ffmpeg -f pulse -ac 2 -i default -f x11grab -r 30 -s WIDTHxHEIGHT -i :0.0+XPOSITION,YPOSITION -acodec pcm_s16le -vcodec libx264 -preset ultrafast -crf 0 -threads 0 record.mkv
 
-3. Final komprimieren, z.B. mit  
+3. Finally encode
 
 		ffmpeg -i record.mkv -acodec libmp3lame -ab 128k -ac 2 -vcodec libx264 -vpre slow -crf 22 -threads 0 output.mp4
