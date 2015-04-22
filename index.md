@@ -1,3 +1,3 @@
-# Welcome to my notes. Please select category above.
+# Welcome to my notes. Please select a category above.
 
 ![](monkey.gif)
