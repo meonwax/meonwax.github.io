@@ -123,6 +123,12 @@ Decrypt it again
 
 	wget -O - https://transfer.sh/lcqHc/hello.txt.gpg | gpg -d -o hello.txt
 
+
+Tomcat deployment using cURL on the commandline
+-----------------------------------------------
+	curl -T acomodeo-0.0.1-SNAPSHOT.war https://stsadmin:catalina2010@acomodeo-dev.sts.de/manager/text/deploy?path=/ROOT
+
+
 DNS Server
 ----------
 `156.154.70.1`				DNS Advantage  
