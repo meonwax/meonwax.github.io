@@ -115,6 +115,14 @@ Sync a directory to another
 [Full system backup with rsync](https://wiki.archlinux.org/index.php/full_system_backup_with_rsync)
 
 
+Encrypt files with password using gpg and upload it
+---------------------------------------------------
+	cat /tmp/hello.txt | gpg -ac -o- | curl -X PUT --upload-file "-" https://transfer.sh/hello.txt.gpg
+	
+Decrypt it again
+
+	wget -O - https://transfer.sh/lcqHc/hello.txt.gpg | gpg -d -o hello.txt
+
 DNS Server
 ----------
 `156.154.70.1`				DNS Advantage  
