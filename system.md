@@ -117,7 +117,7 @@ Sync a directory to another
 
 Encrypt files with password using gpg and upload it
 ---------------------------------------------------
-	cat /tmp/hello.txt | gpg -ac -o- | curl -X PUT --upload-file "-" https://transfer.sh/hello.txt.gpg
+	cat hello.txt | gpg -ac -o- | curl -X PUT --upload-file "-" https://transfer.sh/hello.txt.gpg
 	
 Decrypt it again
 
