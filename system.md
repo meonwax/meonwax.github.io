@@ -126,7 +126,7 @@ Decrypt it again
 
 Tomcat deployment using cURL on the commandline
 -----------------------------------------------
-	curl -T acomodeo-0.0.1-SNAPSHOT.war https://stsadmin:catalina2010@acomodeo-dev.sts.de/manager/text/deploy?path=/ROOT
+	curl -T package.war https://:@acomodeo-dev.sts.de/manager/text/deploy?path=/ROOT
 
 
 DNS Server
