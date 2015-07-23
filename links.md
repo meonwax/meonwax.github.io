@@ -32,6 +32,9 @@ https://cortexamigafloppydrive.wordpress.com
 ## Cortex Amiga Floppy Emulator Sound Mod
 http://retroramblings.net/?p=777
 
+## HxC firmware on low cost Gotek USB Floppy Emulator
+http://hxc2001.free.fr/floppy_drive_emulator/index.html#download
+
 ## Creating a Commodore 64 emulator in GameMaker 
 [Part 1](https://www.yoyogames.com/tech_blog/95),
 [Part 2](https://www.yoyogames.com/tech_blog/96),
