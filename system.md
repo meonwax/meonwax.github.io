@@ -31,16 +31,21 @@ Copy a local public key onto a server for SSH access
 	ssh-copy-id -i ~/.ssh/id_rsa.pub user@server
 
 
+Expose any local server behind a NAT or firewall to the Internet using SSH tunnel
+---------------------------------------------------------------------------------
+	ssh -vN user@yourserver.com -R [remoteport]:localhost:[localport]
+
+
 Use SSH tunnel to access web GUI of a router in a home network
-----------------------------------------------------------
-	ssh -vN -L 8080:192.168.1.1:80 user@homeip -p 2223
+--------------------------------------------------
+	ssh -vN -L 8080:192.168.1.1:80 user@homeip.com
 
 Then open `http://localhost:8080` in a webbrowser
 
 
 Create a SOCKS Proxy through an SSH Tunnel
-------------------------------------------
-	ssh -vN -D 1080 user@server -p 2223
+---------------------------------------
+	ssh -vN -D 1080 user@yourserver.com
 	
 Configure your webbrowser to use a proxy and set `127.0.0.1` as your SOCKS host at port `1080`.
 
