@@ -8,10 +8,15 @@ Execute a command for every file in directory
 ---------------------------------------------
 	for f in *.ape; do ffmpeg -i "$f" "${f%%.*}.wav"; done
 
+
 Search for files recursively and execute a command
 --------------------------------------------------
 	find . -name "*.txt" -type f -exec program
 
+
+Rename all file names from uppercase to lowercase characters
+------------------------------------------------------------
+    for i in $( ls | grep [A-Z] ); do mv -i $i `echo $i | tr 'A-Z' 'a-z'`; done
 
 Set FAT label
 -------------
