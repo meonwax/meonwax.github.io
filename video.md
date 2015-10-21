@@ -31,7 +31,7 @@ Convert to XVid using VBR with video quality 2 and 192 kbit/s MP3 and rescale it
 
 Create a video slideshow from images
 ------------------------------------
-Create a video (using the xvid encoder) from series of numerically sequential images such as img001.jpg, img002.jpg, img003.jpg, etc. 
+Create a video (using the Xvid encoder) from series of numerically sequential images such as img001.jpg, img002.jpg, img003.jpg, etc. 
 
     ffmpeg -framerate 10 -i img%03d.jpg -vcodec libxvid -q:v 2 -s 800*600 out.avi
 
