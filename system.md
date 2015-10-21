@@ -22,6 +22,7 @@ This will only work with file names containing no spaces
 This will only work with file names containing spaces
     find . -depth -name '* *' | while IFS= read -r f ; do mv -v "$f" "$(dirname "$f")/$(basename "$f"|tr '[A-Z]' '[a-z]')" ; done
 
+
 Set FAT label
 -------------
 	mlabel -i /dev/sdh1 ::"MYLABEL"
