@@ -29,6 +29,11 @@ Convert to XVid using VBR with video quality 2 and 192 kbit/s MP3 and rescale it
 [Source](http://nothings.org/remote/ffmpeg.txt)
 
 
+Create a video slideshow from images
+------------------------------------
+    ffmpeg -framerate 10 -i img%03d.jpg -vcodec libxvid -q:v 2 -s 800*600 out.avi
+
+
 Convert videos to be Android/iOS compatible
 -------------------------------------------
 To make a video playable on every Android/iOS device with its builtin video player, use *ffmpeg* to convert it to a compatible format.  
