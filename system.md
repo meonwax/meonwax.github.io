@@ -16,6 +16,10 @@ Search for files recursively and execute a command
 
 Rename all file names from uppercase to lowercase characters
 ------------------------------------------------------------
+This will only work with file names containing no spaces
+    for f in * ; do mv -v $f `echo $f | tr '[A-Z]' '[a-z]'`; done
+
+This will only work with file names containing spaces
     find . -depth -name '* *' | while IFS= read -r f ; do mv -v "$f" "$(dirname "$f")/$(basename "$f"|tr '[A-Z]' '[a-z]')" ; done
 
 Set FAT label
