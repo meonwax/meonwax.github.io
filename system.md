@@ -25,6 +25,7 @@ This will only work with filenames containing spaces:
 	find . -depth -name '* *' | while IFS= read -r f ; do mv -v "$f" "$(dirname "$f")/$(basename "$f"|tr '[A-Z]' '[a-z]')" ; done
 
 You have to use both if you have a mix of filenames with spaces and without them in your folder.
+
 [Source](https://www.garron.me/en/bits/rename-files-to-lower-case-linux-mac.html)
 
 
