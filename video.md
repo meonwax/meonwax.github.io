@@ -69,7 +69,7 @@ Details [here](http://www.html5rocks.com/de/tutorials/video/basics/).
 	<video>
 
 
-Rip a DVD and encode to XVid
+Rip a DVD and encode to Xvid
 ----------------------------
 	dvdbackup -M -i /dev/sr0 -o [DVD_DIRECTORY]
 	lsdvd [DVD_DIRECTORY]
