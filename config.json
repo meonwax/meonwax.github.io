@@ -1,6 +1,6 @@
 {
     "title": "My notes",
-    "useSideMenu": true,
+    "useSideMenu": false,
     "lineBreaks": "original",
     "additionalFooterText": "",
     "anchorCharacter": "#"
