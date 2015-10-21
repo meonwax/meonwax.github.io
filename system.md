@@ -15,7 +15,7 @@ Search for files recursively and execute a command
 
 
 Rename all files from upper- to lowercase in the current directory
---------------------------------------------------------------------------------
+------------------------------------------------------------------
 This will only work with filenames containing no spaces
 
 	for f in * ; do mv -v $f `echo $f | tr '[A-Z]' '[a-z]'`; done
