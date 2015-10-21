@@ -14,7 +14,7 @@ Search for files recursively and execute a command
 	find . -name "*.txt" -type f -exec program
 
 
-Rename all files from upper- to lowercase characters in the current directory
+Rename all files from upper- to lowercase in the current directory
 --------------------------------------------------------------------------------
 This will only work with filenames containing no spaces
 
