@@ -14,13 +14,15 @@ Search for files recursively and execute a command
 	find . -name "*.txt" -type f -exec program
 
 
-Rename all file names from uppercase to lowercase characters
-------------------------------------------------------------
-This will only work with file names containing no spaces
+Rename all files from uppercase to lowercase characters in the current directory
+--------------------------------------------------------------------------------
+This will only work with filenames containing no spaces
     for f in * ; do mv -v $f `echo $f | tr '[A-Z]' '[a-z]'`; done
 
-This will only work with file names containing spaces
+This will only work with filenames containing spaces
     find . -depth -name '* *' | while IFS= read -r f ; do mv -v "$f" "$(dirname "$f")/$(basename "$f"|tr '[A-Z]' '[a-z]')" ; done
+
+You have to use both if you have a mix of filenames with spaces and without them in your working folder.
 
 
 Set FAT label
