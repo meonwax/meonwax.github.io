@@ -26,3 +26,10 @@ Remove temporary files
 Some example [values](http://forum.doom9.org/showthread.php?t=165807) for the `sox compand` command.
 
 Optionally audio could be normalized (maximized volume without clipping) using `sox`.
+
+
+Accelerated encoding from FLAC to MP3
+-------------------------------------
+	parallel -j4 ffmpeg -i {} -qscale:a 0 {.}.mp3 ::: *.flac
+	
+[Source](https://wiki.archlinux.org/index.php/Convert_Flac_to_Mp3#Parallel_version)
