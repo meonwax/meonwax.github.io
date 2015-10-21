@@ -16,7 +16,7 @@ Search for files recursively and execute a command
 
 Rename all file names from uppercase to lowercase characters
 ------------------------------------------------------------
-    for i in $( ls | grep [A-Z] ); do mv -i $i `echo $i | tr 'A-Z' 'a-z'`; done
+    find . -depth -name '* *' | while IFS= read -r f ; do mv -v "$f" "$(dirname "$f")/$(basename "$f"|tr '[A-Z]' '[a-z]')" ; done
 
 Set FAT label
 -------------
