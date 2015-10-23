@@ -11,7 +11,7 @@ Execute a command for every file in directory
 
 Search for files recursively and execute a command
 --------------------------------------------------
-	find . -name "*.txt" -type f -exec program
+	find . -name "*.txt" -type f -exec program \;
 
 
 Rename all files from upper- to lowercase in the current directory
