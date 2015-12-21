@@ -56,3 +56,6 @@ http://powerpcliberation.blogspot.de
 
 ## Unix Toolbox
 http://cb.vu/unixtoolbox.xhtml
+
+## cURL cheat sheet
+https://bagder.github.io/curl-cheat-sheet/http-sheet.html
