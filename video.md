@@ -15,8 +15,8 @@ Download from ZDF mediathek
 
 MEncoder Xvid (2-pass)
 ----------------------
-	mencoder source.mp4 -ovc xvid -xvidencopts pass=1 -vf scale=720:576 -oac mp3lame -o /dev/null
-	mencoder source.mp4 -ovc xvid -xvidencopts pass=2:bitrate=1500 -vf scale=720:576 -oac mp3lame -lameopts cbr:mode=3:br=128 -o target.avi
+	mencoder source.mp4 -ovc xvid -xvidencopts pass=1 -vf scale=720:-1 -oac mp3lame -o /dev/null
+	mencoder source.mp4 -ovc xvid -xvidencopts pass=2:bitrate=1500 -vf scale=720:-1 -oac mp3lame -lameopts cbr:mode=3:br=128 -o target.avi
 [Gentoo Wiki](http://www.gentoo-wiki.info/MEncoder/Rip_DVD#Xvid)
 
 
