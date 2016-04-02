@@ -32,14 +32,25 @@ You have to use both if you have a mix of filenames with spaces and without them
 Set FAT label
 -------------
 	mlabel -i /dev/sdh1 ::"MYLABEL"
-	
-	
+
+
 Create USB stick with UDF filesystem
 ------------------------------------
 	dd if=/dev/zero of=/dev/sdh bs=1M count=1
 	mkudffs -b 512 --media-type=hd /dev/sdh
-	
+
 [Source](http://tanguy.ortolo.eu/blog/article93/usb-udf)
+
+Create and compress harddisk image
+----------------------------------
+Create image and pipe it into *gzip*:
+
+    dd if=/dev/sdd bs=1M | pv | gzip --fast > sdd.img.gz
+
+Write it back with:
+
+    gunzip -c sdd.img.gz | pv | dd of=/dev/sdd bs=1M
+
 
 Copy a local public key onto a server for SSH access
 ----------------------------------------------------
@@ -62,7 +73,7 @@ Then open `http://localhost:8080` in a webbrowser
 Create a SOCKS Proxy through an SSH Tunnel
 ---------------------------------------
 	ssh -vN -D 1080 user@yourserver.com
-	
+
 Configure your webbrowser to use a proxy and set `127.0.0.1` as your SOCKS host at port `1080`.
 
 
@@ -79,19 +90,19 @@ RubyGems
 
 #### Update all the installed gems
 	gem update
-	
+
 #### Remove outdated versions of gems that are installed
 	gem clean
-	
+
 #### Get rid of a gem completely
 	gem uninstall mysql
 
 #### List of locally installed gems
 	gem list
-	
+
 #### List gems along with access times
 	gem stale
-	
+
 
 Create a copy of local Git repository on a remote server
 --------------------------------------------------------
@@ -104,7 +115,7 @@ Create a copy of local Git repository on a remote server
 
 		git remote add origin ssh://user@server/var/git/repo.git
 		git push --set-upstream origin master
-	
+
 
 Vim: Replace in whole document
 ------------------------------
@@ -139,7 +150,7 @@ Sync a directory to another
 Encrypt files with password using gpg and upload it
 ---------------------------------------------------
 	cat hello.txt | gpg -ac -o- | curl -X PUT --upload-file "-" https://transfer.sh/hello.txt.gpg
-	
+
 Decrypt it again
 
 	wget -O - https://transfer.sh/lcqHc/hello.txt.gpg | gpg -d -o hello.txt
