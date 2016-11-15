@@ -158,7 +158,7 @@ Decrypt it again
 
 Tomcat deployment using cURL on the commandline
 -----------------------------------------------
-	curl -T package.war https://user:password@example.com:8080/manager/text/deploy?update=1&path=/ROOT
+	curl -# -T package.war https://user:password@example.com:8080/manager/text/deploy?update=1&path=/ROOT
 
 
 DNS Server
