@@ -161,6 +161,15 @@ Tomcat deployment using cURL on the commandline
 	curl -# -T package.war https://user:password@example.com:8080/manager/text/deploy?update=1&path=/ROOT
 
 
+Restore a single table from *mysqldump*
+---------------------------------------
+Grep the table structure from the dump
+    grep -n 'Table structure' dump.sql
+
+Extract the table using the correct line numbers
+    sed -n '123,456 p' dump.sql > table.sql
+
+
 DNS Server
 ----------
 `156.154.70.1`				DNS Advantage  
