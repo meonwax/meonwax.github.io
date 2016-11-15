@@ -164,9 +164,11 @@ Tomcat deployment using cURL on the commandline
 Restore a single table from *mysqldump*
 ---------------------------------------
 Grep the table structure from the dump
+
     grep -n 'Table structure' dump.sql
 
 Extract the table using the correct line numbers
+
     sed -n '123,456 p' dump.sql > table.sql
 
 [Source](http://gtowey.blogspot.de/2009/11/restore-single-table-from-mysqldump.html)
