@@ -22,9 +22,9 @@ MEncoder Xvid (2-pass)
 
 FFmpeg Xvid
 -----------
-Convert to Xvid using VBR with video quality 2 and 192 kbit/s MP3 and rescale it
+Convert to Xvid using VBR with video quality 3 and 192 kbit/s MP3 and rescale it by 50%
 
-	ffmpeg -i source.mp4 -vcodec libxvid -vf scale=iw*.5:ih*.5 -q:v 3 -acodec libmp3lame -ab 192000 target.avi
+	ffmpeg -i source.mp4 -vcodec libxvid -vf scale=iw*.5:ih*.5 -q:v 3 -acodec libmp3lame -qscale:a 2 target.avi
 	
 [Source](http://nothings.org/remote/ffmpeg.txt)
 
