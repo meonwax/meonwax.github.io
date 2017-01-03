@@ -63,4 +63,4 @@ Optionally audio could be normalized (maximized volume without clipping) using `
 #### Update the (outdated) GNUtunesDB from iTunesDB
     tunes2pod.pl
 
-Attention: You'll have to use `mktunes.pl` if you added/deleted/changed something on the iPod and before unmounting!
+You'll have to use `mktunes.pl` if you added/deleted/changed something on the iPod and before unmounting!
