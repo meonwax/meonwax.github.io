@@ -80,8 +80,8 @@ Details [here](http://www.html5rocks.com/de/tutorials/video/basics/).
 
 2. Insert shown values here:
 
-    ffmpeg -f pulse -ac 2 -i default -f x11grab -r 30 -s WIDTHxHEIGHT -i :0.0+XPOSITION,YPOSITION -acodec pcm_s16le -vcodec libx264 -preset ultrafast -crf 0 -threads 0 record.mkv
+	ffmpeg -f pulse -ac 2 -i default -f x11grab -r 30 -s WIDTHxHEIGHT -i :0.0+XPOSITION,YPOSITION -acodec pcm_s16le -vcodec libx264 -preset ultrafast -crf 0 -threads 0 record.mkv
 
 3. Finally encode
 
-    ffmpeg -i record.mkv -acodec libmp3lame -ab 128k -ac 2 -vcodec libx264 -vpre slow -crf 22 -threads 0 output.mp4
+	ffmpeg -i record.mkv -acodec libmp3lame -ab 128k -ac 2 -vcodec libx264 -vpre slow -crf 22 -threads 0 output.mp4
