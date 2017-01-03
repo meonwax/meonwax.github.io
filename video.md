@@ -29,6 +29,11 @@ Convert to Xvid using video quality VBR 3, audio mp3 quality VBR 2 and rescale i
 [Source](http://nothings.org/remote/ffmpeg.txt)
 
 
+Compress videos created by a consumer digital camera
+----------------------------------------------------
+        ffmpeg -i source.mov -c:v libx264 -preset slow -crf 22 -acodec libmp3lame -qscale:a 2 target.mp4
+
+
 Create a video slideshow from images
 ------------------------------------
 Create a video (using the Xvid encoder) from a series of numerically sequential images such as `img001.jpg`, `img002.jpg`, `img003.jpg`, etc. 
