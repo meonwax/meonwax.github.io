@@ -45,6 +45,11 @@ Optionally audio could be normalized (maximized volume without clipping) using `
 #### Search for album
     gnupod_search.pl --album "regex"
 
+#### Add cover art to existing album
+    gnupod_search.pl --album "regex" --artwork /path/to/albumart.jpg
+
+#### Delete album (be careful)
+    gnupod_search.pl --album "regex" -d
 
 #### Convert GNUtunesDB to iTunesDB
     mktunes.pl
