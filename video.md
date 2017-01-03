@@ -15,8 +15,8 @@ Download from ZDF mediathek
 
 MEncoder Xvid (2-pass)
 ----------------------
-	mencoder source.mp4 -ovc xvid -xvidencopts pass=1 -vf scale=720:-1 -oac mp3lame -o /dev/null
-	mencoder source.mp4 -ovc xvid -xvidencopts pass=2:bitrate=1500 -vf scale=720:-1 -oac mp3lame -lameopts cbr:mode=3:br=128 -o target.avi
+    mencoder source.mp4 -ovc xvid -xvidencopts pass=1 -vf scale=720:-1 -oac mp3lame -o /dev/null
+    mencoder source.mp4 -ovc xvid -xvidencopts pass=2:bitrate=1500 -vf scale=720:-1 -oac mp3lame -lameopts cbr:mode=3:br=128 -o target.avi
 [Gentoo Wiki](http://www.gentoo-wiki.info/MEncoder/Rip_DVD#Xvid)
 
 
@@ -24,14 +24,14 @@ FFmpeg Xvid
 -----------
 Convert to Xvid using video quality VBR 3, audio mp3 quality VBR 2 and rescale it by 50%
 
-	ffmpeg -i source.mp4 -vcodec libxvid -vf scale=iw*.5:ih*.5 -q:v 3 -acodec libmp3lame -qscale:a 2 target.avi
+    ffmpeg -i source.mp4 -vcodec libxvid -vf scale=iw*.5:ih*.5 -q:v 3 -acodec libmp3lame -qscale:a 2 target.avi
 	
 [Source](http://nothings.org/remote/ffmpeg.txt)
 
 
-Compress videos created by a consumer digital camera
-----------------------------------------------------
-        ffmpeg -i source.mov -c:v libx264 -preset slow -crf 22 -acodec libmp3lame -qscale:a 2 target.mp4
+Compress videos created by a digital camera
+-------------------------------------------
+    ffmpeg -i source.mov -c:v libx264 -preset slow -crf 22 -acodec libmp3lame -qscale:a 2 target.mp4
 
 
 Create a video slideshow from images
