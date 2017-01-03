@@ -39,6 +39,12 @@ Optionally audio could be normalized (maximized volume without clipping) using `
 #### Add music tracks
     gnupod_addsong.pl /path/to/music/*.mp3 --artwork /path/to/albumart.jpg
 
+#### Show all music tracks
+    gnupod_search.pl
+
+#### Search for album
+    gnupod_search.pl --album "regex"
+
 
 #### Convert GNUtunesDB to iTunesDB
     mktunes.pl
