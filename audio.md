@@ -32,3 +32,16 @@ Optionally audio could be normalized (maximized volume without clipping) using `
     parallel -j4 ffmpeg -i {} -qscale:a 0 {.}.mp3 ::: *.flac
 
 [Source](https://wiki.archlinux.org/index.php/Convert_Flac_to_Mp3#Parallel_version)
+
+
+# GNUpod
+
+#### Add music tracks
+    gnupod_addsong.pl /path/to/music/*.mp3 --artwork /path/to/albumart.jpg
+
+
+#### Convert GNUtunesDB to iTunesDB
+    mktunes.pl
+
+#### Update the (outdated) GNUtunesDB from iTunesDB
+    tunes2pod.pl
