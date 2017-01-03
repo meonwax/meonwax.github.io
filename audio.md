@@ -36,6 +36,12 @@ Optionally audio could be normalized (maximized volume without clipping) using `
 
 # GNUpod
 
+#### INIT a new iPod (create empty GNUtunesDB and directories)
+    gnupod_INIT.pl
+
+#### Check for 'zombie'-files
+    gnupod_check.pl
+
 #### Add music tracks
     gnupod_addsong.pl /path/to/music/*.mp3 --artwork /path/to/albumart.jpg
 
@@ -56,3 +62,5 @@ Optionally audio could be normalized (maximized volume without clipping) using `
 
 #### Update the (outdated) GNUtunesDB from iTunesDB
     tunes2pod.pl
+
+Attention: You'll have to use `mktunes.pl` if you added/deleted/changed something on the iPod and before unmounting!
