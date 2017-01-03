@@ -16,7 +16,7 @@
 Convert to Xvid using video quality VBR 3, audio mp3 quality VBR 2 and rescale it by 50%
 
     ffmpeg -i source.mp4 -vcodec libxvid -vf scale=iw*.5:ih*.5 -q:v 3 -acodec libmp3lame -qscale:a 2 target.avi
-	
+
 [Source](http://nothings.org/remote/ffmpeg.txt)
 
 
@@ -27,7 +27,7 @@ Convert to Xvid using video quality VBR 3, audio mp3 quality VBR 2 and rescale i
 
 # Create a video slideshow from images
 
-Create a video (using the Xvid encoder) from a series of numerically sequential images such as `img001.jpg`, `img002.jpg`, `img003.jpg`, etc. 
+Create a video (using the Xvid encoder) from a series of numerically sequential images such as `img001.jpg`, `img002.jpg`, `img003.jpg`, etc.
 
     ffmpeg -framerate 10 -i img%03d.jpg -vcodec libxvid -q:v 2 -s 800*600 out.avi
 
@@ -80,8 +80,8 @@ Details [here](http://www.html5rocks.com/de/tutorials/video/basics/).
 
 2. Insert shown values here:
 
-	    ffmpeg -f pulse -ac 2 -i default -f x11grab -r 30 -s WIDTHxHEIGHT -i :0.0+XPOSITION,YPOSITION -acodec pcm_s16le -vcodec libx264 -preset ultrafast -crf 0 -threads 0 record.mkv
+        ffmpeg -f pulse -ac 2 -i default -f x11grab -r 30 -s WIDTHxHEIGHT -i :0.0+XPOSITION,YPOSITION -acodec pcm_s16le -vcodec libx264 -preset ultrafast -crf 0 -threads 0 record.mkv
 
 3. Finally encode
 
-	    ffmpeg -i record.mkv -acodec libmp3lame -ab 128k -ac 2 -vcodec libx264 -vpre slow -crf 22 -threads 0 output.mp4
+        ffmpeg -i record.mkv -acodec libmp3lame -ab 128k -ac 2 -vcodec libx264 -vpre slow -crf 22 -threads 0 output.mp4
