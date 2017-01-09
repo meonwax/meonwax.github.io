@@ -79,6 +79,9 @@ Run on server (to re-establish the tunnel):
 
     ssh -p 2048 localhost
 
+* Set `GatewayPorts yes` in `/etc/ssh/sshd_config` to allow binding to `0.0.0.0` instead of localhost only (server side)
+* Set `ServerAliveInterval 120` on the client to keep an idle connection alive
+
 
 # Show external ip address
     dig +short myip.opendns.com @resolver1.opendns.com
