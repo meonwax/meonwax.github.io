@@ -77,7 +77,7 @@ Configure your webbrowser to use a proxy and set `127.0.0.1` as your SOCKS host 
 # RubyGems
 
 #### Remove outdated gems that are installed
-	gem outdated
+    gem outdated1
 
 #### Update all the installed gems
     gem update
