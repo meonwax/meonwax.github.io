@@ -71,11 +71,11 @@ Configure your webbrowser to use a proxy and set `127.0.0.1` as your SOCKS host 
 
 # Create a reverse SSH tunnel
 
-Run on client machine:
+Run on client:
 
     ssh -R 2048:localhost:22 username@servername
 
-Run on server side (to re-establish the tunnel):
+Run on server (to re-establish the tunnel):
 
     ssh -p 2048 localhost
 
