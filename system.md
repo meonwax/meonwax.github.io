@@ -69,6 +69,15 @@ Then open `http://localhost:8080` in a webbrowser
 Configure your webbrowser to use a proxy and set `127.0.0.1` as your SOCKS host at port `1080`.
 
 
+# Create a reverse SSH tunnel
+
+Run on client machine:
+    ssh -R 2048:localhost:22 username@servername
+
+Run on server side (to re-establish the tunnel):
+    ssh -p 2048 localhost
+
+
 # Show external ip address
     dig +short myip.opendns.com @resolver1.opendns.com
     curl checkip.spdns.de
@@ -77,7 +86,7 @@ Configure your webbrowser to use a proxy and set `127.0.0.1` as your SOCKS host 
 # RubyGems
 
 #### Remove outdated gems that are installed
-    gem outdated1
+    gem outdated
 
 #### Update all the installed gems
     gem update
@@ -120,7 +129,7 @@ Add it as origin in local repo and initially push
 `[c` Jump to the previous change.
 
 
-# Compile kernel modules for linux kernel >= 3.8
+# Compile old kernel modules for linux kernel >= 3.8
 
 Remove all references to `__devinit`, `__devexit` and `__devexit_p` from the module sources as these have been removed in 3.8
 
