@@ -45,6 +45,12 @@ Optionally audio could be normalized (maximized volume without clipping) using `
 #### Add music tracks
     gnupod_addsong.pl /path/to/music/*.mp3 --artwork /path/to/albumart.jpg
 
+#### Add podcast from file
+    gnupod_addsong.pl -p "Podcast Title" --playlist-is-podcast podcast.mp3
+
+#### Add podcast from feed URL and download the last 10 episodes
+    gnupod_addsong.pl -p "Podcast Title" --playlist-is-podcast http://url/to/podcast/rss.xml --podcast-artwork --podcast-files-limit=10
+
 #### Show all music tracks
     gnupod_search.pl
 
