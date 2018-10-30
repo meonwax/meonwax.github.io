@@ -15,11 +15,11 @@ Blank CD-RW
 
 Raw CD Rip
 ----------
-	cdrdao read-cd --device /dev/sr0 --read-raw --datafile output.bin output.toc
+	cdrdao read-cd --device /dev/sr0 --driver generic-mmc-raw --read-raw --datafile output.bin output.toc
 
 Copy audio CD DAO with one CD drive
 -----------------------------------
-    cdrdao copy --device 0,4,0 --buffers 64 --driver generic-mmc-raw --read-raw toc-file.toc 
+    cdrdao copy --device /dev/sr0 --driver generic-mmc-raw --read-raw toc-file.toc 
 
 This will prompt you to insert the CD-R after an image of the source CD was created. The image file with name `cddata<pid>.bin` will be created in the current working directory and removed when done.
 
