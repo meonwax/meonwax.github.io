@@ -177,3 +177,22 @@ Extract the table using the correct line numbers
 `193.151.4.201`         ispOne  
 `213.73.91.35`          dnscache.berlin.ccc.de  
 `8.8.8.8` und `8.8.4.4` Google Public DNS
+
+# Sync iOS files
+```
+# Create directories
+mkdir -p ~/ios-mnt
+mkdir -p ~/ios-backup/
+
+# Pair phone
+idevicepair pair
+ifuse -u 6f35d83c4b8b8eb91d10f7103bd91ad3981d9fb8 ~/ios-mnt
+
+# Copy data
+rsync -v -a mnt ~/ios-backup/
+
+# Unpair
+fusermount -u ~/ios-mnt
+idevicepair --debug unpair
+```
+
